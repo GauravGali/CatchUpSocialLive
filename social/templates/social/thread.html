@@ -141,7 +141,7 @@
                             </div>
                         {% endif %}
                     </div>
-<div class = "messages-body" >
+<div class = "messages-body">
                         {% for message in message_list %}
                             <div>
 
@@ -154,18 +154,18 @@
                                                 </div>
                                             {% endif %}
 
-                                                <p>
-                                                    {{ message.body }}
+                                                <p style='font-weight:100'>
+                                                    {{ message.body }} 
                                                 </p>
                                         </div>
                                     {% elif message.receiver_user == request.user %}
-                                        <div class = "message-receiver">
+                                        <div class = "message-receiver" style='display:flex;align-items:center;justify-content:flex-end;'>
                                             {% if message.image %}
                                                 <div class="photo-message">
                                                     <img src="{{ message.image.url }}"  alt=""/>
                                                 </div>
                                             {% endif %}
-                                            <p>
+                                            <p style='font-weight:100'>
                                                 {{ message.body }}
                                             </p>
                                         </div>
